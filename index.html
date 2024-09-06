@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Safras</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>SOFTWARE DE GERENCIAMENTO DE PROPRIEDADE PRODUTORA DE TABACO</h1>
+
+    <!-- Cadastro de Nova Safra -->
+    <section id="cadastro-safra">
+        <h2>Cadastro de Nova Safra</h2>
+        <form id="form-cadastro-safra">
+            <label for="ano">Ano da Safra:</label>
+            <input type="number" id="ano" name="ano" required>
+
+            <label for="variedade">Variedade de Tabaco:</label>
+            <input type="text" id="variedade" name="variedade" required>
+
+            <label for="quantidade">Quantidade de Pés Plantados:</label>
+            <input type="number" id="quantidade" name="quantidade" required>
+
+            <label for="estimativa">Estimativa de Produção em arrobas:</label>
+            <input type="number" id="estimativa" name="estimativa" required>
+
+            <button type="submit">Cadastrar Safra</button>
+        </form>
+    </section>
+
+    <!-- Histórico de Safras -->
+    <section id="historico-safras">
+        <h2>Histórico de Safras</h2>
+        <div id="lista-historico"></div>
+    </section>
+
+    <!-- Cadastro de Trato Cultural -->
+    <section id="cadastro-trato">
+        <h2>Cadastrar Novo Trato Cultural</h2>
+        <form id="form-cadastro-trato">
+            <label for="atividade">Nome da Atividade:</label>
+            <input type="text" id="atividade" name="atividade" required>
+
+            <label for="data-inicio">Data de Início:</label>
+            <input type="date" id="data-inicio" name="data-inicio" required>
+
+            <label for="data-fim">Data de Fim:</label>
+            <input type="date" id="data-fim" name="data-fim" required>
+
+            <label for="relatorio">Relatório:</label>
+            <textarea id="relatorio" name="relatorio" required></textarea>
+
+            <button type="submit">Cadastrar Trato</button>
+        </form>
+    </section>
+
+    <!-- Cadastro de Custos -->
+    <section id="cadastro-custos">
+        <h2>Cadastrar Custos</h2>
+        <form id="form-cadastro-custos">
+            <label for="descricao">Descrição do Custo:</label>
+            <input type="text" id="descricao" name="descricao" required>
+
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" name="valor" required>
+
+            <button type="submit">Cadastrar Custo</button>
+        </form>
+    </section>
+
+    <!-- Botão para gerar relatório -->
+    <section id="gerar-relatorio">
+        <button id="btn-gerar-relatorio">Gerar Relatório Completo</button>
+    </section>
+
+    <!-- Tela de Relatório Completo -->
+    <section id="relatorio-completo" style="display: none;">
+        <h2>Relatório Completo</h2>
+        <div id="conteudo-relatorio"></div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
